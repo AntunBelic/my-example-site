@@ -1,0 +1,517 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* nav */
+
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    background-color:rgba(0, 99, 192, 1);
+    font-family: 'Otomanopee One', sans-serif;
+    position: fixed;
+    width: 100%;
+    border-bottom: 0.5vh solid white;
+    z-index: 3;
+}
+
+.logo{
+    color: rgb(240, 232, 232);
+    letter-spacing: 5px; 
+    font-size: 20px;
+    min-width: 40%;
+    max-height: 80px;
+    padding-left: 20px;
+}
+.nav-links {
+    display:flex;
+    justify-content: space-around;
+    width: 500px;
+    padding-right: 20px;
+}
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color: rgb(240, 232, 232);
+    text-decoration:none;
+    letter-spacing: 3px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height:3px;
+    background-color: rgb(240, 232, 232);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* home */
+
+main {
+    width: 100%;
+    height: 100vh;
+}
+
+.main {
+    background-image:url(./pics/PROMO3.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+}
+
+/* about */
+
+
+.about {
+    width: 100%;
+    height: 100vh;
+    border-top: 8vh solid rgba(0, 99, 192, 1);
+    color: rgb(240, 232, 232);
+    background-image: url(./pics/spilja1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    overflow:hidden;
+    position: relative;
+}
+
+.naslov {
+    width: 40%;
+    height: 15vh;
+    background-color:rgba(0, 99, 192, 0.5);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-family: 'Otomanopee One', sans-serif;
+    border-top-right-radius: 45%;
+    border-bottom-right-radius: 45%;
+    top: 10vh;
+    position: relative;
+    z-index: 2;
+    border: 0.5vh solid white;
+}
+
+.clanak{
+    width: 50%;
+    height: 38vh;
+    background-color:rgba(0, 99, 192, 0.5);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    top: 28vh;
+    font-size: 1.4rem;
+    font-family: 'Otomanopee One', sans-serif;
+    position: relative;
+    left: 50%;
+    z-index: 2;
+    border: 0.5vh solid white;
+    border-top-left-radius: 45%;
+    border-bottom-left-radius: 45%;
+    padding: 5vh;
+}
+
+
+/*gallery */
+.mainy{
+    width: 100%;
+    height: 100vh;
+    background-image:url(./pics/spilja2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 8vh;
+    overflow:hidden;
+    position: relative;  
+}
+.gallery-container{
+    width: 100%;
+    height: 100vh;
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 3fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "naslov naslov naslov naslov naslov naslov naslov naslov naslov naslov naslov naslov"
+    " . . . skoljkasi skoljkasi . . rakovi rakovi . . . "
+    "glavonosci glavonosci . . . bodljikasi bodljikasi . . . puzevi puzevi"
+    ". . . spuzve spuzve . . koralji koralji . . ."
+    ". . . . . . . . . . . .";   
+}
+
+.poravnanje {
+    display:inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.galerija {
+    grid-area: naslov;
+}
+
+.galerija h4{
+    font-size: 2.4rem;
+    font-family: 'Otomanopee One', sans-serif;
+    padding-bottom: 1vh;
+    color:rgb(240, 232, 232);
+    text-shadow: 0px 0px 4px rgba(0, 99, 192, 1);
+}
+.galerija p{
+    font-size: 1.4rem;
+    font-family: 'Otomanopee One', sans-serif;
+    padding-bottom: 4vh;
+    color:rgb(143, 234, 250);
+    text-shadow: 0px 0px 5px rgba(0, 99, 192, 1);
+}
+
+.izgled h6{
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    padding-bottom: 1vh;
+    color:rgb(240, 232, 232);
+    text-shadow: 0px 0px 4px rgba(0, 99, 192, 1);   
+}
+.izgled p{
+    font-size: 0.8rem;
+    font-family: 'Otomanopee One', sans-serif;
+    color:rgb(143, 234, 250);
+    text-shadow: 0px 0px 5px rgba(0, 99, 192, 1);
+}
+
+.skoljkasi{
+    grid-area: skoljkasi;
+}
+.rakovi{
+    grid-area:rakovi;
+}
+
+.glavonosci{
+    grid-area:glavonosci;
+    justify-content: center;
+    align-items: center;
+}
+
+.bodljikasi{
+    grid-area:bodljikasi;
+}
+
+.puzevi{
+    grid-area:puzevi;
+}
+
+.spuzve{
+    grid-area:spuzve;
+}
+
+.koralji{
+    grid-area:koralji; 
+}
+
+/* contact */
+
+.contact-main{
+    width: 100%;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+section{
+    scroll-snap-align: start;
+}
+
+
+.bus {
+    position: relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+    height: 100%;
+    padding: 20px 100px;
+}
+
+
+.bus::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image:url(./pics/IZLO4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: blur(7px);
+    padding-top: 8vh;
+     z-index: -1;
+}
+
+.contact-box{
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.20);
+}
+
+.contact-right {
+    background-color: rgba(240, 232, 232, 0.6);
+    padding: 25px 40px;
+}
+.contact-right h3 {
+    position: relative;
+    font-size: 2rem;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    color:rgba(0, 99, 192, 1);
+}
+.contact-right h3::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom:0;
+    transform: translateX(-50%);
+    height: 4px;
+    border-radius: 3px;
+    background-color: rgb(240, 232, 232);
+}
+.field {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgba(0, 99, 192, 1);
+    background-color: rgba(240, 232, 232, 0.1);
+    font-size: 1rem;
+    margin-bottom: 30px;
+    transition: .3s;
+}
+.field:hover{
+    background-color: rgba(0, 0, 0, 0.03);
+}
+.field:focus{
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.area{
+    min-height: 150px;
+}
+
+.btn{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: rgba(0, 99, 192, 1);
+    cursor: pointer;
+    outline:none;
+    border:none;
+    color:rgb(240, 232, 232);
+    transition: .3s;
+}
+
+.btn:hover{
+    background-color: rgb(1, 82, 158);
+}
+
+
+.contact-left{
+    background-color:rgba(0, 99, 192, 0.1);
+}
+.bus__image{
+   max-width: 100%;
+}
+
+.contact-container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: aqua;
+}
+
+.location-map{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: chocolate;
+}
+
+/* media and animations */
+
+@media screen and (max-width:768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: absolute;
+        right:0px;
+        height:92vh;
+        top: 8vh;
+        background-color:rgba(0, 99, 192, 0.9);
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 3;
+    }
+
+   .nav-links li {
+       opacity: 0;
+   }
+
+    .burger {
+        display:block;
+    }
+
+    .logo {
+        font-size:15px;
+    }
+
+    .naslov{
+        font-size: 1.4rem;
+        padding: 2vh;
+    }
+
+    .clanak{
+        font-size: 5px;
+        width: 75%;
+        height: 48vh;
+        left: 25%;
+        padding-right: 1vh;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: absolute;
+        right:0px;
+        height:92vh;
+        top: 8vh;
+        background-color:rgba(0, 99, 192, 0.8);
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+   .nav-links li {
+       opacity: 0;
+   }
+
+    .burger {
+        display:block;
+    }
+
+    
+
+    .clanak{
+        font-size: 1rem;
+    }
+
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+    .contact-left{
+        height:200px;
+    }
+}
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity:0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+.bubbles img {
+    width: 3rem;
+    animation: bubble 7s linear infinite;
+}
+
+.bubbles {
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -70px;
+}
+
+@keyframes bubble{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+        
+        opacity: 1;
+    }
+    70%{
+        
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-95vh);
+        opacity: 0;
+    }
+}
+
+.bubbles img:nth-child(1){
+    animation-delay: 6s;
+}
+.bubbles img:nth-child(2){
+    animation-delay: 2.5s;
+}
+.bubbles img:nth-child(3){
+    animation-delay: 3.5s;
+}
+.bubbles img:nth-child(4){
+    animation-delay: 5.5s;
+}
+.bubbles img:nth-child(5){
+    animation-delay: 1s;
+}
+.bubbles img:nth-child(6){
+    animation-delay: 3s;
+}
+.bubbles img:nth-child(7){
+    animation-delay: 2s;
+}
