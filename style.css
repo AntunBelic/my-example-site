@@ -27,6 +27,11 @@ nav{
     max-height: 80px;
     padding-left: 20px;
 }
+.logo h4 a{
+    color: rgb(240, 232, 232);
+    text-decoration:none;
+}
+
 .nav-links {
     display:flex;
     justify-content: space-around;
@@ -73,57 +78,191 @@ main {
 }
 
 /* about */
-
-
-.about {
+.about-main{
     width: 100%;
     height: 100vh;
-    border-top: 8vh solid rgba(0, 99, 192, 1);
-    color: rgb(240, 232, 232);
+}
+
+.about {
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-items: space-around;
+    flex-direction: column;
+    padding-top: 8vh;
+    width: 100%;
+    color:rgb(240, 232, 232);
+}
+
+
+.about::after {
+    content: '';
+    min-height: 100vh;
+    height: 100%;
+    position: fixed;
+    width: 100%;
     background-image: url(./pics/spilja1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    overflow:hidden;
-    position: relative;
+    filter: blur(2px);
+    padding-top: 8vh;
+     z-index: -1;
 }
 
 .naslov {
-    width: 40%;
+    position: relative;
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
     height: 15vh;
-    background-color:rgba(0, 99, 192, 0.5);
+    padding-left: 5vw;
+
+
+}
+.product-title {
+    position: relative;
     display:flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.8rem;
-    font-family: 'Otomanopee One', sans-serif;
-    border-top-right-radius: 45%;
-    border-bottom-right-radius: 45%;
-    top: 10vh;
-    position: relative;
-    z-index: 2;
-    border: 0.5vh solid white;
+    width: 100%;
+    height: 12vh;
+
+
+}
+.naslov h4{
+    position: absolute;
+    font-size:4.5rem;
+}
+.product-title h4{
+    position: absolute;
+    font-size:3.5rem;
+}
+.product-title h4:nth-child(1){
+    text-shadow: -2px 2px 0px #fff,
+    -4px 4px 0px #fff,
+    -6px 6px 0px #fff,
+    -8px 8px 0px #fff,
+    -18px 18px 15px rgba(141, 138, 138, 0.5),
+    -18px 18px 35px rgba(141, 138, 138, 0.5),;
+}
+.product-title h4:nth-child(2){
+    color: rgba(0, 99, 192, 1);
+    opacity: 0.5;
+    animation: waves 3s ease-in-out infinite;
 }
 
+.product-title h4:nth-child(3){
+    color: rgba(0, 99, 192, 1);
+    opacity: 0.5;
+    animation: waves 4.5s ease-in-out infinite;
+}
+
+.product-title h4:nth-child(4){
+    color: rgba(0, 99, 192, 1);
+    animation: waves 6s ease-in-out infinite;
+}
+
+.naslov h4:nth-child(1){
+    text-shadow: -2px 2px 0px #fff,
+    -4px 4px 0px #fff,
+    -6px 6px 0px #fff,
+    -8px 8px 0px #fff,
+    -18px 18px 15px rgba(141, 138, 138, 0.5),
+    -18px 18px 35px rgba(141, 138, 138, 0.5),;
+}
+.naslov h4:nth-child(2){
+    color: rgba(0, 99, 192, 1);
+    opacity: 0.5;
+    animation: waves 3s ease-in-out infinite;
+}
+
+.naslov h4:nth-child(3){
+    color: rgba(0, 99, 192, 1);
+    opacity: 0.5;
+    animation: waves 4.5s ease-in-out infinite;
+}
+
+.naslov h4:nth-child(4){
+    color: rgba(0, 99, 192, 1);
+    animation: waves 6s ease-in-out infinite;
+}
 .clanak{
-    width: 50%;
-    height: 38vh;
-    background-color:rgba(0, 99, 192, 0.5);
+    position: relative;
     display:flex;
     justify-content: center;
     align-items: center;
-    top: 28vh;
-    font-size: 1.4rem;
-    font-family: 'Otomanopee One', sans-serif;
-    position: relative;
-    left: 50%;
-    z-index: 2;
-    border: 0.5vh solid white;
-    border-top-left-radius: 45%;
-    border-bottom-left-radius: 45%;
-    padding: 5vh;
+    text-align: center;
+    font-size:1.2rem;
+    box-shadow: 0px 0px 30px 7px rgba(0,0,0,0.7);
+    width: 100vw;
+    height: 10vh;
+    text-shadow: 1px 1px 2px rgb(1, 82, 158);
+    background-color:rgba(18, 32, 54, 0.5);
 }
 
+.card {
+    position: relative;
+    width: 240px;
+    height: 320px;
+    background-color: rgba(0, 99, 192, 1);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.card::before{
+    content: "";
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(240, 232, 232);
+    transform: skewY(345deg);
+    transition: 0.5s;
+}
+.card:hover::before{
+    top: -60%;
+    transform: skewY(390deg);
+}
+
+.card .imgBx {
+    position: relative;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+}
+
+.imgBx img {
+    width: 50%;
+    border: 3px solid rgb(1, 71, 184);
+    border-radius: 15px;
+}
+
+.card .contentBx {
+    position: relative;
+    padding:20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+}
+
+.products-cards{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 240px);
+    justify-content:center;
+    align-items: center;
+    box-shadow: 0px 0px 30px 7px rgba(0,0,0,0.7);
+    background-color:rgba(18, 32, 54, 0.5);
+    column-gap: 2rem;
+    row-gap: 2rem;
+    width: 100vw;
+}
 
 /*gallery */
 .mainy{
@@ -137,16 +276,17 @@ main {
     overflow:hidden;
     position: relative;  
 }
+
 .gallery-container{
     width: 100%;
     height: 100vh;
     display:grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 3fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     "naslov naslov naslov naslov naslov naslov naslov naslov naslov naslov naslov naslov"
     " . . . skoljkasi skoljkasi . . rakovi rakovi . . . "
-    "glavonosci glavonosci . . . bodljikasi bodljikasi . . . puzevi puzevi"
+    " . glavonosci glavonosci . . bodljikasi bodljikasi . . puzevi puzevi ."
     ". . . spuzve spuzve . . koralji koralji . . ."
     ". . . . . . . . . . . .";   
 }
@@ -181,7 +321,11 @@ main {
     font-family: sans-serif;
     padding-bottom: 1vh;
     color:rgb(240, 232, 232);
-    text-shadow: 0px 0px 4px rgba(0, 99, 192, 1);   
+    text-shadow: 0px 0px 4px rgba(0, 99, 192, 1);
+}
+.izgled h6 a{
+    text-decoration: none;
+    color:rgb(240, 232, 232);
 }
 .izgled p{
     font-size: 0.8rem;
@@ -219,19 +363,111 @@ main {
     grid-area:koralji; 
 }
 
+/* gallery-lightbox */
+
+.gallery_naslov{
+    display:inline-flex;
+    height:200px;
+    width:100%;
+    justify-content: left;
+    align-items: flex-end;
+    z-index: 1;
+}
+.gallery_naslov h4{
+    font-size: 2rem;
+    font-family: sans-serif;
+    color:rgb(240, 232, 232);
+    text-shadow: 0px 0px 4px rgba(0, 99, 192, 1);
+    padding: 15px;
+
+}
+
+.album{
+    width: 100%;
+    background-color: rgba(240, 232, 232, 0.2);
+    padding: 25px 40px;
+    box-shadow: 0px 0px 30px 7px rgba(0,0,0,0.7);
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    min-height: 50vh;
+    grid-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.img-container{
+    overflow: hidden;
+    z-index: 1;
+}
+
+.img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+.img-container img:hover{
+    transform: scale(1.3);
+}
+
+.gallery_naslov p{
+    font-size: 1.2rem;
+    font-family: 'Otomanopee One', sans-serif;
+    color:rgb(143, 234, 250);
+    text-shadow: 0px 0px 5px rgba(0, 99, 192, 1);
+    font-style: italic;
+    padding: 15px;
+    padding-bottom: 17px;
+    padding-left: 0px;
+}
+
+.modal{
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top:8vh;
+    left:0;
+    width:100%;
+    height:92vh;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease-out;
+    z-index: 1;
+}
+.modal.open{
+    opacity: 1;
+    pointer-events: all;
+}
+.modal p{
+    color:rgb(240, 232, 232);
+    font-size: 2rem;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+}
+
+.full-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: all 0.3s ease-out;
+    object-fit:contain;
+    height:70%;
+}
+.full-img.open{
+    transform: translate(-50%, -50%) scale(1);
+}
+
 /* contact */
 
 .contact-main{
     width: 100%;
     height: 100vh;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
 }
 
-section{
-    scroll-snap-align: start;
-}
 
 
 .bus {
@@ -242,6 +478,7 @@ section{
     width: 100%;
     height: 100%;
     padding: 20px 100px;
+    
 }
 
 
@@ -249,7 +486,7 @@ section{
     content: '';
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height:92vh;
     background-image:url(./pics/IZLO4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -268,7 +505,52 @@ section{
     text-align: center;
     box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.20);
 }
+.contact-left{
+    height:100%;
+}
+.contact-right{
+    height:100%;
+}
 
+.contact-left h3 {
+    position: relative;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    color:rgb(240, 232, 232);
+    text-align: start;
+    padding-left: 20px;
+    padding-top: 30px;
+    text-shadow: 1px 1px 2px rgb(1, 82, 158);
+}
+
+.info-table {
+    position: relative;
+    text-align:left;
+    padding: 10px;
+    margin: 20px;
+    color:rgb(240, 232, 232);
+    text-shadow: 1px 1px 2px rgb(1, 82, 158);
+
+}
+
+.info-table td{
+    padding: 10px;
+}
+
+.sm {
+    position: relative;
+    display:flex;
+    list-style: none;
+    justify-content:flex-end;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+.sm li a img{
+    height:40px;
+    width: 40px;
+    margin-right:5px
+}
 .contact-right {
     background-color: rgba(240, 232, 232, 0.6);
     padding: 25px 40px;
@@ -336,20 +618,6 @@ section{
    max-width: 100%;
 }
 
-.contact-container{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    background-color: aqua;
-}
-
-.location-map{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    background-color: chocolate;
-}
-
 /* media and animations */
 
 @media screen and (max-width:768px) {
@@ -370,6 +638,10 @@ section{
         transition: transform 0.5s ease-in;
         z-index: 3;
     }
+    .contact-main{
+        width: 100%;
+    }
+
 
    .nav-links li {
        opacity: 0;
@@ -383,21 +655,108 @@ section{
         font-size:15px;
     }
 
-    .naslov{
-        font-size: 1.4rem;
-        padding: 2vh;
+    .bus::after{
+        min-height: 100vh;
+        height: 100%;
+        position: fixed;
+    }
+    .about::after{
+        min-height: 100vh;
+        height: 100%;
+        position: fixed;
+    }
+    .bus {
+        padding: 0px 10px;
+
+    }
+    .contact-right{
+        padding: 20px 30px; 
     }
 
-    .clanak{
-        font-size: 5px;
-        width: 75%;
-        height: 48vh;
-        left: 25%;
-        padding-right: 1vh;
+    .field {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.8rem;
+        margin-bottom:10px;
+    }
+    .contact-right h3 {
+        font-size: 1rem;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+    .contact-left h3 {
+        font-size: 1rem;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+    .info-table {
+        position: relative;
+        text-align:left;
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+    
+    .info-table td{
+        padding: 3px;
+    }
+    
+    .sm {
+        margin-right: 20px;
+        margin-bottom: 5px;
+    }
+    .sm li a img{
+        height: 30px;
+        width: 30px;
+        margin-right:5px
+    }
+    .area{
+        min-height: 100px;
+    }
+
+    .galerija h4{
+        font-size: 2.1rem; 
+    }
+    .galerija p{
+        font-size: 1.1rem;
+
+    }
+    
+    .izgled h6{
+        font-size: 1rem;
+ 
+    }
+    .izgled p{
+        font-size: 0.5rem;
+    }
+
+    .gallery_naslov{
+        height:55px;
+        margin-top:20vh;
+    }
+    .gallery_naslov h4{
+        font-size: 1rem;
+    }
+    .gallery_naslov p{
+        font-size: 0.5rem;
+    }
+    .album{
+        padding: 10px 20px;
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        min-height: 30vh;
+        grid-gap: 1rem;
+        position: relative;
+    }
+
+    .modal p{
+        font-size: 0.8rem;
+    }
+    
+    .full-img{
+        height: 35%;
     }
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1024px) and (min-width:768px) {
     body {
         overflow-x: hidden;
     }
@@ -418,12 +777,14 @@ section{
    .nav-links li {
        opacity: 0;
    }
-
+   .about::after{
+    min-height: 100vh;
+    height: 100%;
+    position: fixed;
+    }
     .burger {
         display:block;
     }
-
-    
 
     .clanak{
         font-size: 1rem;
@@ -431,10 +792,62 @@ section{
 
     .contact-box {
         grid-template-columns: 1fr;
+        max-height: 92vh;
     }
-    .contact-left{
-        height:200px;
+    .bus {
+        padding: 0px 10px;
+
+    } 
+    .contact-right{
+        padding: 20px 30px; 
     }
+
+    .field {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.8rem;
+        margin-bottom:10px;
+    }
+    .contact-right h3 {
+        font-size: 1rem;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+    .contact-left h3 {
+        font-size: 1rem;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+    .info-table {
+        position: relative;
+        text-align:left;
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+    
+    .info-table td{
+        padding: 3px;
+    }
+    
+    .sm {
+        margin-right: 20px;
+        margin-bottom: 5px;
+    }
+    .sm li a img{
+        height: 30px;
+        width: 30px;
+        margin-right:5px
+    }
+    .area{
+        min-height: 100px;
+    }
+
+    .modal p{
+        font-size: 0.8rem;
+    }
+    .full-img{
+        height: 50%;
+    }
+    
 }
 .nav-active {
     transform: translateX(0%);
@@ -464,6 +877,7 @@ section{
 .bubbles img {
     width: 3rem;
     animation: bubble 7s linear infinite;
+    z-index:0;
 }
 
 .bubbles {
@@ -514,4 +928,19 @@ section{
 }
 .bubbles img:nth-child(7){
     animation-delay: 2s;
+}
+
+
+@keyframes waves 
+{
+0%,100%{
+    clip-path: polygon(0 56%, 16% 50%, 35% 50%, 51% 60%,
+    66% 69%, 84% 69%, 99% 57%, 100% 100%, 1% 99%);
+}
+50%
+{
+    clip-path: polygon(0 61%, 16% 70%, 33% 70%, 48% 60%, 67% 53%,
+     84% 51%, 100% 55%, 100% 100%, 0 100%);
+
+}
 }
