@@ -5,7 +5,7 @@ const navSlide = () => {
    
    
     
-    burger.addEventListener('click', () => {
+    burger.addEventListener('click', () => { 
         //toggle nav
         nav.classList.toggle('nav-active');
 
@@ -24,28 +24,14 @@ const navSlide = () => {
     
 }
 
-navSlide();
 
-const modal = document.querySelector(".modal");
-const previews = document.querySelectorAll(".album img");
-const original = document.querySelector(".full-img");
-const caption = document.querySelector(".caption");
-
-previews.forEach((preview) => {
-    preview.addEventListener("click", () => {
-        modal.classList.add("open");
-        original.classList.add("open");
-        const originalSrc = preview.getAttribute("data-original");
-        original.src = `./pics/gallery/${originalSrc}`;
-        const altText = preview.alt;
-        caption.textContent = altText;
-
-    });
-});
-
-modal.addEventListener("click", (e) => {
-    if(e.target.classList.contains("modal")){
-        modal.classList.remove("open");
-        original.classList.remove("open");
-    }
+$( document ).ready(function() {
+    navSlide();
+    $('.skoljka-gallery a').simpleLightbox({captionSelector: "self"});
+    $('.rakovi-gallery a').simpleLightbox({captionSelector: "self"});
+    $('.glavonosci-gallery a').simpleLightbox({captionSelector: "self"});
+    $('.bodljikasi-gallery a').simpleLightbox({captionSelector: "self"});
+    $('.puzevi-gallery a').simpleLightbox({captionSelector: "self"});
+    $('.spuzve-gallery a').simpleLightbox({captionSelector: "self"});
+    $('.koralji-gallery a').simpleLightbox({captionSelector: "self"});
 });
