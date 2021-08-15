@@ -25,6 +25,5 @@ const navSlide = () => {
 }
 
 
-$( document ).ready(function() {
-    navSlide();
-});
+
+ navSlide();
