@@ -665,6 +665,14 @@ main {
         height: 100%;
         position: fixed;
     }
+    .clanak{
+        font-size: 1rem;
+    }
+
+    .contact-box {
+        grid-template-columns: 1fr;
+        max-height: 92vh;
+    }
     .bus {
         padding: 0px 10px;
 
@@ -840,14 +848,7 @@ main {
     .area{
         min-height: 100px;
     }
-
-    .modal p{
-        font-size: 0.8rem;
-    }
-    .full-img{
-        height: 50%;
-    }
-    
+   
 }
 .nav-active {
     transform: translateX(0%);
