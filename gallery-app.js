@@ -27,4 +27,11 @@ const navSlide = () => {
 
 $( document ).ready(function() {
     navSlide();
+    $('.skoljka-gallery a').simpleLightbox({captionSelector: "self"});
+    $('.rakovi-gallery a').simpleLightbox({captionSelector: "self"});
+    $('.glavonosci-gallery a').simpleLightbox({captionSelector: "self"});
+    $('.bodljikasi-gallery a').simpleLightbox({captionSelector: "self"});
+    $('.puzevi-gallery a').simpleLightbox({captionSelector: "self"});
+    $('.spuzve-gallery a').simpleLightbox({captionSelector: "self"});
+    $('.koralji-gallery a').simpleLightbox({captionSelector: "self"});
 });
